@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DefaultsDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Un-dL-3bq">
+                                <rect key="frame" x="159.66666666666666" y="127" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JcB-8P-QJ1">
+                                <rect key="frame" x="60" y="223" width="270" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fKi-3U-LVc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exu-pT-eBK">
+                                <rect key="frame" x="164.66666666666666" y="303" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ajc-vi-aK6">
+                                <rect key="frame" x="60" y="398" width="270" height="32"/>
+                                <segments>
+                                    <segment title="❤️"/>
+                                    <segment title="🙏"/>
+                                    <segment title="😎"/>
+                                    <segment title="🥳"/>
+                                    <segment title="🥶"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X5-2a-4s2">
+                                <rect key="frame" x="128.66666666666666" y="489" width="132.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete all data"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="exu-pT-eBK" firstAttribute="top" secondItem="JcB-8P-QJ1" secondAttribute="bottom" constant="40" id="Dgp-tX-9ON"/>
+                            <constraint firstItem="ajc-vi-aK6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="EbD-V5-XBn"/>
+                            <constraint firstItem="ajc-vi-aK6" firstAttribute="top" secondItem="exu-pT-eBK" secondAttribute="bottom" constant="60" id="J1X-hF-aMC"/>
+                            <constraint firstItem="ajc-vi-aK6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="KgA-V0-POv"/>
+                            <constraint firstItem="JcB-8P-QJ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="QvW-9j-TUK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JcB-8P-QJ1" secondAttribute="trailing" constant="60" id="TSm-hf-Af4"/>
+                            <constraint firstItem="9Un-dL-3bq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="YD2-wO-m29"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajc-vi-aK6" secondAttribute="trailing" constant="60" id="ak6-EO-XUG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajc-vi-aK6" secondAttribute="trailing" constant="60" id="dm1-W5-KpT"/>
+                            <constraint firstItem="0X5-2a-4s2" firstAttribute="top" secondItem="ajc-vi-aK6" secondAttribute="bottom" constant="60" id="fCM-2t-n0x"/>
+                            <constraint firstItem="exu-pT-eBK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fVE-Uv-nr4"/>
+                            <constraint firstItem="0X5-2a-4s2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="glB-Kz-8xh"/>
+                            <constraint firstItem="JcB-8P-QJ1" firstAttribute="top" secondItem="9Un-dL-3bq" secondAttribute="bottom" constant="60" id="p58-b3-ehy"/>
+                            <constraint firstItem="9Un-dL-3bq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qBh-lR-F02"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="0X5-2a-4s2" id="5v2-xd-T8k"/>
+                        <outlet property="saveButton" destination="exu-pT-eBK" id="Cvn-yl-4eT"/>
+                        <outlet property="segmentControl" destination="ajc-vi-aK6" id="Cye-C2-aQz"/>
+                        <outlet property="statusLabel" destination="9Un-dL-3bq" id="5rQ-5D-O3y"/>
+                        <outlet property="textField" destination="JcB-8P-QJ1" id="emN-qJ-yCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="113.84615384615384" y="-28.436018957345969"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
